@@ -30,7 +30,7 @@ const crawler = new CheerioCrawler({
                 let [day, month] = date?.split(' ')
                 day = convertNumberToDoubleDigitString(parseInt(replacePersianNumber(day)))
                 month = convertMonthToNumber(month)
-                const targetElement:cheerio.Cheerio = $(el)
+                const targetElement = $(el)
                 const isHoliday = elementHasClass(targetElement, 'eventHoliday')
                 extractedEvents.push({
                     date:  year+'-'+month+'-'+day,
