@@ -29,7 +29,7 @@ export function textContainsWord(text: string, word: string): boolean {
     return wordsArray.includes(word)
 }
 
-export function elementHasClass(element: cheerio.Cheerio, className: string) {
+export function elementHasClass(element: any, className: string) {
     const elementAttributes = element.attr()
     if (elementAttributes.hasOwnProperty('class')) {
         return textContainsWord(elementAttributes.class, className)
